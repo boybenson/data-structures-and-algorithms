@@ -40,6 +40,21 @@ class LinkedList {
     }
   }
 
+  deleteHead() {
+    let current = this.head;
+    this.head = current.next;
+  }
+
+  deleteLast() {
+    let current = this.head;
+    while (current) {
+      if (!current.next.next) {
+        current.next = null;
+      }
+      current = current.next;
+    }
+  }
+
   printList() {
     let current = this.head;
     while (current) {
@@ -56,5 +71,7 @@ LL.insertFirst(200);
 LL.insertAt(1, 900);
 
 LL.insertLast(500);
+
+LL.deleteLast();
 
 LL.printList();
