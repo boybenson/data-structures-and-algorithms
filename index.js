@@ -55,6 +55,8 @@ class LinkedList {
     }
   }
 
+  deleteAt(position) {}
+
   printList() {
     let current = this.head;
     while (current) {
@@ -71,7 +73,5 @@ LL.insertFirst(200);
 LL.insertAt(1, 900);
 
 LL.insertLast(500);
-
-LL.deleteLast();
 
 LL.printList();
